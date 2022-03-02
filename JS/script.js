@@ -32,7 +32,7 @@ const displayResult = phones => {
         <img src="${phone.image}" class="card-img-top" alt="...">
         <div class="card-body">
         <h3 class="card-title">${phone.phone_name}</h3>
-        <button onclick="loadSingleResult('${phone.slug}')">Details</button>
+        <button class="btn btn-secondary" onclick="loadSingleResult('${phone.slug}')">Details</button>
         </div>
         </div>
          `
