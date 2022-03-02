@@ -7,7 +7,7 @@ const searchPhone = () => {
         `
         fetch(url)
         .then(res => res.json())
-        .then(data => displayResult(data.data));
+        .then(data => displayResult(data));
         document.getElementById('error').style.display = 'none';
     }
     else{
@@ -23,8 +23,8 @@ const displayResult = phones => {
     const searchResult = document.getElementById('search-result')
     // clear search result
     searchResult.textContent = '';
-    phones.forEach( phone => {
-        console.log(phone)
+    for(let i = 1; i <= 20; i++){
+        const phone = phones.data[i]
         const div = document.createElement('div')
         div.classList.add('col')
         div.innerHTML = `
@@ -36,8 +36,8 @@ const displayResult = phones => {
         </div>
         </div>
          `
-        searchResult.appendChild(div)
-    })
+        searchResult.appendChild(div)    
+    }
 }
 
 const loadSingleResult = (phone) => {
