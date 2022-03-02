@@ -1,3 +1,6 @@
+.body{
+    background-color: rgba(197, 195, 195, 0.507);
+}
 #error{
     width: 200px;
     background-color: rgb(218, 175, 175);
